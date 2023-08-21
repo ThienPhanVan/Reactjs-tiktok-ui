@@ -14,7 +14,6 @@ import {
    faEarthAsia,
    faCircleQuestion,
    faKeyboard,
-   faCloudUpload,
    faMessage,
    faUser,
    faCoins,
@@ -27,7 +26,9 @@ import HeadlessTippy from '@tippyjs/react/headless';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from '~/components/AccountItem';
 import 'tippy.js/dist/tippy.css';
-import MenuItems from '~/components/Popper/Menu/MenuItems';
+
+import { UpLoadIcon } from '~/components/Icons';
+import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
 
@@ -169,7 +170,7 @@ function Header() {
                         placement="bottom"
                      >
                         <button className={cx('action-btn')}>
-                           <FontAwesomeIcon icon={faCloudUpload} />
+                           <UpLoadIcon />
                         </button>
                      </Tippy>
 
@@ -194,9 +195,9 @@ function Header() {
                   onChange={handleMenuChange}
                >
                   {currentUser ? (
-                     <img
+                     <Image
                         className={cx('user-avatar')}
-                        src="https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/c585761f76789f32cb7b357830e8b94c~c5_100x100.jpeg?x-expires=1692532800&x-signature=nrzk3QXwhMjNMNStmYtIUPYfYPE%3D"
+                        src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/feea8baa034148dca6584cf41f4d5212~c5_100x100.jpeg?x-expires=1692795600&x-signature=K0sff%2FicZQr%2BXkH9BadH2NtLW1A%3D"
                         alt="Phan Van Thien"
                      />
                   ) : (
