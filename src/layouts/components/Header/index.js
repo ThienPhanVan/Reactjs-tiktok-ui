@@ -14,7 +14,7 @@ import {
    faSignOut,
 } from '@fortawesome/free-solid-svg-icons';
 import 'tippy.js/dist/tippy.css';
-import routesConfig from '~/config/routes';
+import config from '~/config';
 
 import Button from '~/components/Button';
 import styles from './Header.module.scss';
@@ -103,10 +103,12 @@ function Header() {
       <header className={cx('wrapper')}>
          <div className={cx('inner')}>
             <div className={cx('logo')}>
-               <Link to={routesConfig.home} className={cx('logo-link')}>
+               <Link to={config.home} className={cx('logo-link')}>
                   <img src={images.logo} alt="Tiktok" />
                </Link>
             </div>
+
+            <Button>{['F8', ' ', 'REACTJS']}</Button>
 
             {/* Search */}
             <Search />
@@ -144,7 +146,7 @@ function Header() {
                      <Button text>Upload</Button>
                      <Button
                         primary
-                        righttIcon={<FontAwesomeIcon icon={faSignIn} />}
+                        rightIcon={<FontAwesomeIcon icon={faSignIn} />}
                      >
                         Log in
                      </Button>
